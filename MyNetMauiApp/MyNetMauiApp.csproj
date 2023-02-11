@@ -52,4 +52,10 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 	</ItemGroup>
 
+	<PropertyGroup Condition="$(TargetFramework.Contains('-ios')) and '$(Configuration)' == 'Release'">
+		<RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
+		<CodesignKey>Apple Distribution: Luis Beltran (DA8E52KFPN)</CodesignKey>
+		<CodesignProvision>MyMauiProvisioningProfile</CodesignProvision>
+	</PropertyGroup>
+
 </Project>
